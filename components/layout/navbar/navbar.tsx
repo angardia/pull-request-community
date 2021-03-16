@@ -57,7 +57,7 @@ const Navbar = () => {
       <style jsx>{`
         .navbar {
           color: white;
-          height: 150px;
+          height: var(--header-height);
           background-color: #242831;
           display: flex;
           align-items: center;

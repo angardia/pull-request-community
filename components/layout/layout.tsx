@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { getMetaData } from '../../services/metaData';
 import Navbar from './navbar/navbar';
+import PersonCardModal from '../personCardModal/personCardModal';
 
 const Layout = ({ children }: LayoutProps) => {
   const currentRoute = useRouter().pathname;
@@ -17,6 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
         {metaContents && metaContents.map((meta, i) => <meta key={i} {...meta} />)}
       </Head>
       <Navbar />
+      <PersonCardModal />
       <div className="layout__container layout__body--container">{children}</div>
 
       <style>{`
